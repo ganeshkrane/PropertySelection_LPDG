@@ -1,0 +1,93 @@
+<mvc:View controllerName="com.ui5.propertyselection.controller.SelectionScreen"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:l="sap.ui.layout"
+	xmlns:w="sap.ui.webc.main"
+    xmlns:dr="sap.ui.webc.main"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+<Page id="SSpage" title="{i18n>title}" class="pageCls sapUiSizeCompact">
+	<customHeader>
+			<Bar>
+				<contentMiddle>
+					<Title id="headerTiltle" class="hdrclass" text="{i18n>title}"/>
+				</contentMiddle>
+				<contentLeft>
+					<!-- <Button id="back" icon="sap-icon://nav-back"  press="navBack"></Button>
+					<Image id="custIconDetail2" width="40%" height="100%"/> -->
+				</contentLeft>
+				<contentRight >
+					<!-- <ToggleButton icon="sap-icon://full-screen" press="handleFullscreen" visible="{device>/isDesktop}"/> -->
+					<!-- <core:Icon id="custIconDetail" src="sap-icon://account"/>
+					<Text id="UserNameDetail"/> -->
+				</contentRight>
+			</Bar>
+		</customHeader>
+        <content> 
+    	<f:SimpleForm id="SimpleFormDisplay354"
+			class=".urGrpTtlWeb1"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanXL="4"
+			labelSpanL="4"
+			labelSpanM="4"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+           	emptySpanXL="3"
+			emptySpanL="3"
+			emptySpanM="3"
+			emptySpanS="0"
+			columnsXL="2"
+			columnsL="2"
+			columnsM="2"
+			ariaLabelledBy="Title1"
+			singleContainerFullSize="false" >
+			<f:toolbar>
+				<Toolbar>
+					<Title id="Title1"  titleStyle="H5" text="Choose a property or search for it with" />
+					
+				</Toolbar>
+			</f:toolbar>
+			<f:content>
+			
+				<Label text="{i18n>PropNum}" design="Bold"/>
+                <HBox >
+                <Input   id="tplnrInput" liveChange="onchangeTplnr" submit="onSubmitTplnr"/>
+                <Text   id="tplnrTxt" visible="false"/>
+                <Button id="searchBtn" class="contBtnCls" icon="sap-icon://search" type="Emphasized" press="onSearch" width="10%" />
+                </HBox>
+                <core:Title class="ttlCls"/>
+                <Label text="{i18n>AccPeriod}" design="Bold" id="AcPeriodLbl" visible="false"/>
+                	<!-- <dr:DateRangePicker
+                            visible="false"
+							id="DRP1"
+							placeholder="{i18n>Enter_Dt}"
+							change="handleChange"
+							class="sapUiSmallMarginBottom"/> -->
+				<Select forceSelection="false" visible="false" id="AcPeriod">
+					
+					<!-- <core:Item key="001" text="01-07-2022 - 30-06-2023 | (001)" />
+					<core:Item key="002" text="01-07-2023 - 30-06-2024 | (002)" /> -->
+				</Select>
+
+			</f:content>
+		</f:SimpleForm>
+		<!-- <w:MessageStrip
+				id="msgStrip"
+				visible="false"
+				text=""
+				design="Negative"
+				class="sapUiMediumMarginBottom"
+				close="handleCloseMsg">
+			</w:MessageStrip> -->
+        <Toolbar >
+        <Button  text="{i18n>Back}" class="contBtnCls" visible="false" id="backBtn" icon="sap-icon://close-command-field" type="Emphasized" press="onBack" ></Button>
+        <ToolbarSpacer />
+        <Button  text="{i18n>ViewMode}" class="contBtnCls" id="EditContinueBtn" visible="false" iconFirst="false"  type="Emphasized" press="onEditContinue" ></Button>
+        <Button  text="{i18n>Continue}" class="contBtnCls" iconFirst="false" icon="sap-icon://open-command-field" type="Emphasized" press="onContinue" ></Button>
+        </Toolbar> 
+
+       
+ </content>
+    </Page> 
+</mvc:View>

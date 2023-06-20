@@ -1,0 +1,47 @@
+<mvc:View controllerName="com.ui5.propertyselection.controller.ObjectInfo"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:l="sap.ui.layout"
+	xmlns:w="sap.ui.webc.main"
+    xmlns:dr="sap.ui.webc.main"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <Page id="ObjInfpage" title="{i18n>ObjPageTitle}">
+        <content>
+            <f:SimpleForm id="SimpleFormDisplay"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanXL="5"
+			labelSpanL="5"
+			labelSpanM="5"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+           	emptySpanXL="3"
+			emptySpanL="3"
+			emptySpanM="3"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			ariaLabelledBy="Title1"
+			singleContainerFullSize="false" >
+			<!-- <f:toolbar>
+				<Toolbar>
+					<Title id="Title1"  titleStyle="H5" text="Choose a property or search for it with" />
+					
+				</Toolbar>
+			</f:toolbar> -->
+			<f:content>
+			    <Label text="{i18n>EditPropNum}" design="Bold"  />
+                <Text id="PropNumInput" />
+                <Label text="{i18n>Address}" design="Bold"  />
+                <Text id="addressInput"/>
+                <Label text="{i18n>AccPeriod}" design="Bold"  />
+                <Text id="accPeriodInput"/>
+                <Label text="{i18n>InitRecording}" design="Bold" />
+                <Text  id="RecordInput"/>
+            </f:content>
+		</f:SimpleForm>
+		</content>
+    </Page>
+</mvc:View>

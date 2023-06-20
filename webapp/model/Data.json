@@ -1,0 +1,24 @@
+{"results":[
+	{
+		"tplnr": "8273642",
+		"pernr": "0359743",
+        "name1":"john",
+        "Name2":"Doe",
+        "plz":"Delhi",
+        "street":"Dalal Street",
+        "houseNum":"401"
+	},
+    {
+		"tplnr": "8237684",
+		"pernr": "3239834",
+        "name1":"john",
+        "Name2":"Singh",
+        "plz":"Mumbai",
+        "street":"Wagale Street",
+        "houseNum":"743"
+	}
+
+
+
+	
+]}
